@@ -1,0 +1,21 @@
+# Python
+__pychache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Env
+.env
+.env.Local
+
+# Node
+node_modules/
+frontend/dist/
+
+# Local Models and data
+*.gguf
+data/
+
+# Editors
+.vscode
