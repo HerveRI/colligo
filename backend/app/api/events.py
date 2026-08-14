@@ -9,7 +9,7 @@ from sse_starlette.sse import ServerSentEvent
 
 class EventType(StrEnum):
     TOKEN = "token"
-    TOOL_CALL_STARTED = "tools_call_started"
+    TOOL_CALL_STARTED = "tool_call_started"
     TOOL_RESULT = "tool_result"
     DONE = "done"
     ERROR = "error"
