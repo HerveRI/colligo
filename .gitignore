@@ -19,3 +19,6 @@ data/
 
 # Editors
 .vscode
+
+scripts/
+gate-think.jsonl
