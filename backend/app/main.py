@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api import chat, health
 from app.core.config import get_settings
 from app.core.logging import setup_logging
+from app.db.session import dispose_engine
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         settings.AGENT_MAX_ITERATIONS,
     )
     yield
+    await dispose_engine()
     logger.info("colligo down")
 
 
