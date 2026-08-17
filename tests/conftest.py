@@ -11,9 +11,10 @@ os.environ.setdefault("LLM_PROVIDER", "ollama")
 os.environ.setdefault("EMBED_PROVIDER", "ollama")
 
 import pytest  # noqa: E402
-from backend.app.core.config import get_settings  # noqa: E402
-from backend.app.main import app  # noqa: E402
 from httpx import ASGITransport, AsyncClient  # noqa: E402
+
+from app.core.config import get_settings  # noqa: E402
+from app.main import app  # noqa: E402
 
 
 @pytest.fixture
